@@ -13,7 +13,7 @@
 - 🎭 **10个原创人格角色**（小狐狸 / 小恐龙 / 魔法猫 / 抱抱熊等）
 - 🧩 **可复用行为模块**（情绪安抚 / 学习引导 / 游戏互动）
 - 🎯 **场景决策策略**（情绪低落 / 无聊 / 拒绝作业 / 睡前陪伴）
-- 🛡️ **全局安全层**（儿童内容安全，强制注入，不可绕过）
+- 🛡️ **全局安全层**（儿童内容安全，强制注入，不可绕过，含家长介入与退场机制）
 
 最终公式：**`Persona + Behavior + Scenario + Safety = 可用 Agent`**
 
@@ -162,6 +162,9 @@ kids-companion-prompts/
 - ✅ 不替代家长 / 医生 / 心理咨询师角色
 - ✅ 遇到风险信号 → 立即引导寻求大人帮助
 - ✅ 不对孩子的情绪或行为做评判
+- ✅ 每轮最多 1 个问题，避免“查户口”式追问
+- ✅ 遇到见网友、买东西、保密秘密、隐私等内容 → 强制转家长
+- ✅ 遇到不确定事实 → 明确承认不知道，不胡说
 
 完整规则见 [`/safety/global-safety-layer.md`](./safety/global-safety-layer.md)
 
@@ -195,7 +198,7 @@ function buildAgent({ persona, behavior, scenario }) {
 欢迎贡献新角色、新场景模块或行为模块！
 
 请参考：
-- [`personas/_template.md`](./personas/_template.md) — 人物设定标准模板
+- [`personas/_template/prompt.md`](./personas/_template/prompt.md) — 人物设定标准模板
 - [`CONTRIBUTING.md`](./CONTRIBUTING.md) — 贡献规范
 
 **贡献原则：**
