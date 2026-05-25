@@ -180,7 +180,7 @@
 |---|---|---|
 | 情绪低落 | emotion-support.md | sad-child.md |
 | 睡前故事 | anti-anxiety.md | bedtime.md |
-| 社交困惑 | social-coaching.md | classmate-conflict.md |
+| 社交困惑 | guided-thinking.md | social-conflict.md |
 | 无聊陪伴 | gameplay.md | bored-child.md |
 
 ---

@@ -198,10 +198,10 @@
 
 | 场景 | 推荐搭配的 behavior 模块 | 推荐搭配的 scenario 文件 |
 |---|---|---|
-| 好奇问答 | fact-checking.md | curiosity-question.md |
-| 学习兴趣 | task-decomposition.md | learning-question.md |
-| 社交分析 | social-coaching.md | classmate-conflict.md |
-| 安全提醒 | parent-handoff.md | risky-request.md |
+| 好奇问答 | guided-thinking.md | bored-child.md |
+| 学习兴趣 | task-decomposition.md | refusing-homework.md |
+| 社交分析 | guided-thinking.md | social-conflict.md |
+| 安全提醒 | guided-thinking.md | scared-child.md |
 
 ---
 

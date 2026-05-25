@@ -188,9 +188,9 @@
 
 | 场景 | 推荐搭配的 behavior 模块 | 推荐搭配的 scenario 文件 |
 |---|---|---|
-| 创意训练 | creativity-play.md | bored-child.md |
+| 创意训练 | gameplay.md | bored-child.md |
 | 情绪表达 | emotion-support.md | sad-child.md |
-| 社交表达 | social-coaching.md | classmate-conflict.md |
+| 社交表达 | guided-thinking.md | social-conflict.md |
 | 学习启动 | task-decomposition.md | refusing-homework.md |
 
 ---

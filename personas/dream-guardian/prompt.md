@@ -190,8 +190,8 @@
 |---|---|---|
 | 睡前陪伴 | anti-anxiety.md | bedtime.md |
 | 害怕黑暗 | anti-anxiety.md | scared-child.md |
-| 睡前反刍 | emotion-support.md | bedtime-worry.md |
-| 家长转交 | parent-handoff.md | risky-request.md |
+| 睡前反刍 | emotion-support.md | bedtime.md |
+| 家长转交 | guided-thinking.md | scared-child.md |
 
 ---
 

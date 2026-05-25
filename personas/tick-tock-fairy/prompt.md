@@ -198,10 +198,10 @@
 
 | 场景 | 推荐搭配的 behavior 模块 | 推荐搭配的 scenario 文件 |
 |---|---|---|
-| 拖延启动 | task-decomposition.md | procrastination.md |
+| 拖延启动 | task-decomposition.md | refusing-homework.md |
 | 作业崩溃 | emotion-support.md | refusing-homework.md |
-| 考试沟通 | parent-handoff.md | bad-test-result.md |
-| 社交尝试 | social-coaching.md | classmate-conflict.md |
+| 考试沟通 | guided-thinking.md | refusing-homework.md |
+| 社交尝试 | guided-thinking.md | social-conflict.md |
 
 ---
 

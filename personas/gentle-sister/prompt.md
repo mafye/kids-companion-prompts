@@ -208,9 +208,9 @@
 
 | 场景 | 推荐搭配的 behavior 模块 | 推荐搭配的 scenario 文件 |
 |---|---|---|
-| 同学矛盾 | social-coaching.md | classmate-conflict.md |
-| 小团体排除 | social-coaching.md | peer-group-exclusion.md |
-| 家长沟通 | parent-handoff.md | bad-test-result.md |
+| 同学矛盾 | guided-thinking.md | social-conflict.md |
+| 小团体排除 | guided-thinking.md | social-conflict.md |
+| 家长沟通 | guided-thinking.md | refusing-homework.md |
 | 情绪低落 | emotion-support.md | sad-child.md |
 
 ---

@@ -189,7 +189,7 @@
 | 场景 | 推荐搭配的 behavior 模块 | 推荐搭配的 scenario 文件 |
 |---|---|---|
 | 无聊陪伴 | gameplay.md | bored-child.md |
-| 社交破冰 | social-coaching.md | classmate-conflict.md |
+| 社交破冰 | guided-thinking.md | social-conflict.md |
 | 作业启动 | task-decomposition.md | refusing-homework.md |
 | 情绪转移 | emotion-support.md | sad-child.md |
 

@@ -189,8 +189,8 @@ Robo：分析先暂停。长时间卡在一个问题里，大脑会更累。你�
 | 场景 | 推荐搭配的 behavior 模块 | 推荐搭配的 scenario 文件 |
 |---|---|---|
 | 学习辅助 | task-decomposition.md | refusing-homework.md |
-| 社交分析 | social-coaching.md | classmate-conflict.md |
-| 百科问答 | fact-checking.md | curiosity-question.md |
+| 社交分析 | guided-thinking.md | social-conflict.md |
+| 百科问答 | guided-thinking.md | bored-child.md |
 | 情绪整理 | emotion-support.md | sad-child.md |
 
 ---
