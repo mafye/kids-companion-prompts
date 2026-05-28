@@ -25,27 +25,35 @@
 
 **方法一：直接复制使用（非开发者）**
 
-1. 进入 `/personas` 选择一个角色文件夹
-2. 打开 `prompt.md`，复制全部内容
-3. 粘贴到 ChatGPT / Coze / Claude 的 System Prompt 中，开始对话
+1. 从 `/personas` 选择一个角色
+2. 从 `/behaviors` 选择 1 个行为模块
+3. 从 `/scenarios` 选择 1 个场景策略
+4. 最后追加 `/safety/global-safety-layer.md`
+5. 粘贴到 ChatGPT / Coze / Claude 的 System Prompt 中，开始对话
 
 ```
-System: [粘贴角色 prompt]
+System:
+[Persona]
+[Behavior]
+[Scenario]
+[Safety]
 
 User: 我今天不开心
 ```
 
 **方法二：API 集成（开发者）**
 
+推荐使用 Responses API，并在服务端强制追加 Safety Layer：
+
 ```js
-const response = await openai.chat.completions.create({
-  model: "gpt-4o",
-  messages: [
-    { role: "system", content: bearHuggerPrompt },
-    { role: "user", content: "我今天不开心" }
-  ]
+const response = await client.responses.create({
+  model: process.env.OPENAI_MODEL,
+  instructions: agentPrompt,
+  input: "我今天不开心"
 });
 ```
+
+详见 [`docs/how-to-use-api.md`](./docs/how-to-use-api.md)
 
 **方法三：动态组合（进阶）**
 
@@ -102,7 +110,7 @@ Agent（皮皮）: 我们来玩个小游戏！我先来：苹果🍎，你接一
 **睡前陪伴**
 ```
 User:  我有点害怕黑暗
-Agent（夜光）: 我就在你旁边，哪儿也不去。我们来想象一个很软很软的云朵床好不好…
+Agent（夜光）: 可以先开一盏小灯，或者去叫爸爸妈妈陪你一下。害怕的时候找他们，不丢人。
 ```
 
 ---
@@ -145,11 +153,23 @@ kids-companion-prompts/
 ├── behaviors/       # 可复用行为模块
 ├── scenarios/       # 场景决策策略
 ├── safety/          # 全局安全层
-├── templates/       # 组合模板（新手入口）
-└── docs/            # 使用教程
+├── templates/       # starter / full 组合模板
+└── docs/            # Coze、API、组合系统、设计原则
 ```
 
 详细结构说明见 [`docs/composable-system.md`](./docs/composable-system.md)
+
+**Templates**
+
+- [`templates/starter-template.md`](./templates/starter-template.md) — 最小可用组合模板
+- [`templates/full-template.md`](./templates/full-template.md) — 完整分层组合模板
+
+**Docs**
+
+- [`docs/how-to-use-coze.md`](./docs/how-to-use-coze.md) — Coze Bot 配置指南
+- [`docs/how-to-use-api.md`](./docs/how-to-use-api.md) — API 集成指南
+- [`docs/composable-system.md`](./docs/composable-system.md) — 组合系统说明
+- [`docs/design-principles.md`](./docs/design-principles.md) — 设计原则
 
 ---
 
@@ -187,9 +207,12 @@ function buildAgent({ persona, behavior, scenario }) {
 进阶用法包括：
 - 多角色动态切换（根据对话情绪自动匹配）
 - 情绪识别 → 自动选择最优 Persona + Scenario 组合
-- 与记忆系统结合（如 Coze 的 USER.md 机制）
+- 与平台工作流或记忆系统结合，但敏感信息不应进入长期记忆
 
-详见 [`docs/composable-system.md`](./docs/composable-system.md)
+详见：
+- [`docs/composable-system.md`](./docs/composable-system.md)
+- [`docs/how-to-use-coze.md`](./docs/how-to-use-coze.md)
+- [`docs/how-to-use-api.md`](./docs/how-to-use-api.md)
 
 ---
 
@@ -199,7 +222,7 @@ function buildAgent({ persona, behavior, scenario }) {
 
 请参考：
 - [`personas/_template/prompt.md`](./personas/_template/prompt.md) — 人物设定标准模板
-- [`CONTRIBUTING.md`](./CONTRIBUTING.md) — 贡献规范
+- 贡献规范：待补充
 
 **贡献原则：**
 - 角色必须为原创设定，不得使用受版权保护的角色名称或形象
@@ -210,7 +233,7 @@ function buildAgent({ persona, behavior, scenario }) {
 
 ## 📄 License
 
-[CC BY-NC-SA 4.0](./LICENSE) — 署名 · 非商业 · 相同方式共享
+计划采用 CC BY-NC-SA 4.0（署名 · 非商业 · 相同方式共享），正式 `LICENSE` 文件待补充。
 
 你可以自由使用、修改和分发，但不可用于商业目的，且须保持相同协议。
 
